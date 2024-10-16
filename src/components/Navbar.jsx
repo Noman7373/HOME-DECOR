@@ -3,13 +3,16 @@ import { BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import Productcart from "./Productcart";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="h-24 w-full bg-black flex justify-around text-center items-center text-white shadow-2xl">
+      <nav className="h-24 w-full bg-black flex justify-around text-center items-center text-white shadow-2xl fixed z-20">
         <div>
-          <h1 className="text-[30px] text-slate-100 font-bold">HOME DECOR</h1>
+          <h1 className="uppercase text-[20px] md:text-[27px] text-slate-100 font-bold">
+            HomeStyle Mart
+          </h1>
         </div>
 
         <ul className="hidden gap-6 text-[16px] md:flex">
@@ -60,6 +63,8 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
+      {/* imporing add to cart side bar components */}
+      <Productcart />
     </>
   );
 };

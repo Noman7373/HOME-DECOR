@@ -6,14 +6,14 @@ import { BsPaypal } from "react-icons/bs";
 import { RiQuestionAnswerLine } from "react-icons/ri";
 import Newarrival from "./Newarrival";
 import Bestsellers from "./Bestsellers";
-// import Footer from "./Footer";
+
 
 const Main = () => {
   return (
     <>
-      <div className="px-[20px] overflow-x-hidden pt-[50px] pb-[30px]">
-        <div className="flex flex-col gap-[30px] mt-4 justify-around md:flex-row items-center">
-          <div className="flex flex-col gap-4 max-w-[500px] p-4">
+      <div className="px-[20px] overflow-x-hidden pt-[150px] pb-[30px]">
+        <div className="flex flex-col gap-[10px] mt-4 justify-between md:flex-row items-center">
+          <div className="flex flex-col gap-4 max-w-[600px] p-4">
             <h1 className="text-[30px] md:text-[50px] font-bold">
               Home of quality furniture
             </h1>
@@ -34,7 +34,7 @@ const Main = () => {
             <img src={mainImage} alt="home-image" />
           </div>
         </div>
-        <div className="flex-wrap md:flex justify-center items-center w-full gap-6 mt-12 p-2 px-[20px]">
+        <div className="hidden flex-wrap md:hidden lg:flex justify-center items-center w-full gap-6 mt-12 p-2 px-[20px]">
           <div className="flex flex-col justify-center items-center gap-2 max-w-[300px] border shadow-2xl rounded-lg text-center p-5">
             <span className="rounded-full flex items-center justify-center p-2 bg-black">
               <CiDeliveryTruck size={30} color="white" />

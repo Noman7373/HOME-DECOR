@@ -109,7 +109,7 @@ const Newarrival = () => {
           New Arrival
         </h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-col-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {newArrivalData.map((items, id) => {
           return <Allnewarrivalitems key={id} items={items} />;
         })}
