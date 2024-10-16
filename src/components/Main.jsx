@@ -14,7 +14,7 @@ const Main = () => {
       <div className="px-[20px] overflow-x-hidden pt-[50px] pb-[30px]">
         <div className="flex flex-col gap-[30px] mt-4 justify-around md:flex-row items-center">
           <div className="flex flex-col gap-4 max-w-[500px] p-4">
-            <h1 className="text-[20px] md:text-[50px] font-bold">
+            <h1 className="text-[30px] md:text-[50px] font-bold">
               Home of quality furniture
             </h1>
             <p className="text-slate-700 text-[20px] md:text-[27px]">
