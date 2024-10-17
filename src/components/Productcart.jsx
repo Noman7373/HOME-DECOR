@@ -9,14 +9,12 @@ import {
 
 const Productcart = ({ showCart, handleFunction }) => {
   const cartItems = useSelector((state) => state.cart.data);
-  
-// Subtotal of All addtocard items
+
+  // Subtotal of All addtocard items
   const totalAmout = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
-
-  console.log(totalAmout);
 
   const dispatch = useDispatch();
 

@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link to="/">
             <li>Home</li>
           </Link>
-          <Link>
+          <Link to="/bedroom">
             <li>Bedroom</li>
           </Link>
           <Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
         </div>
       </nav>
       {/* imporing add to cart side bar components */}
-      <Productcart showCart={cartShow} handleFunction = {handleCartSlide} />
+      <Productcart showCart={cartShow} handleFunction={handleCartSlide} />
     </>
   );
 };
