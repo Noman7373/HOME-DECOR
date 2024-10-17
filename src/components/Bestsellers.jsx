@@ -22,7 +22,7 @@ const Bestsellers = () => {
       img: img1,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$250",
+      price: 250,
       actualPrice: "$240",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
@@ -33,7 +33,7 @@ const Bestsellers = () => {
       img: img2,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$270",
+      price: 270,
       actualPrice: "$250",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
@@ -44,7 +44,7 @@ const Bestsellers = () => {
       img: img3,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$300",
+      price: 300,
       actualPrice: "$250",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
@@ -55,7 +55,7 @@ const Bestsellers = () => {
       img: img4,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$320",
+      price: 320,
       actualPrice: "$290",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
@@ -66,7 +66,7 @@ const Bestsellers = () => {
       img: img5,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$150",
+      price: 150,
       actualPrice: "$135",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
@@ -77,7 +77,7 @@ const Bestsellers = () => {
       img: img6,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$210",
+      price: 210,
       actualPrice: "$190",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
@@ -88,7 +88,7 @@ const Bestsellers = () => {
       img: img7,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$270",
+      price: 270,
       actualPrice: "$250",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
@@ -99,15 +99,15 @@ const Bestsellers = () => {
       img: img8,
       description:
         "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: "$350",
+      price: 350,
       actualPrice: "$320",
       icon1: <HiHeart />,
       icon2: <BiCartAdd />,
     },
   ];
 
-  function handleAddToCart(id, name, img, price) {
-    let products = { id, name, img, price };
+  function handleAddToCart(id, name, img, price, actualPrice) {
+    let products = { id, name, img, price, actualPrice, quantity: 1 };
     dispatch(addToCart(products));
   }
   return (
@@ -145,7 +145,7 @@ const Bestsellers = () => {
                         <span className="text-slate-400 line-through">
                           {actualPrice}
                         </span>
-                        <p className="text-white font-bold ">{price}</p>
+                        <p className="text-white font-bold ">${price}</p>
                       </div>
                     </div>
                     <div className="text-white flex gap-2 justify-center items-center">
@@ -154,7 +154,9 @@ const Bestsellers = () => {
                       </button>
                       <button
                         className="hover:text-slate-400 text-[30px]"
-                        onClick={() => handleAddToCart(id, name, price, img)}
+                        onClick={() =>
+                          handleAddToCart(id, name, img, price, actualPrice)
+                        }
                       >
                         {icon2}
                       </button>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 import Productcart from "./Productcart";
 
 const Navbar = () => {
+  const [cartShow, setCartShow] = useState(false);
+
+  function handleCartSlide() {
+    setCartShow((prev) => !prev);
+  }
   return (
     <>
       <nav className="h-24 w-full bg-black flex justify-around text-center items-center text-white shadow-2xl fixed z-20">
@@ -58,13 +63,16 @@ const Navbar = () => {
           <button className="hover:text-slate-400 text-[30px]">
             <FaHeart />
           </button>
-          <button className="hover:text-slate-400 text-[30px]">
+          <button
+            className="hover:text-slate-400 text-[30px]"
+            onClick={handleCartSlide}
+          >
             <PiShoppingCartSimpleFill />
           </button>
         </div>
       </nav>
       {/* imporing add to cart side bar components */}
-      <Productcart />
+      <Productcart showCart={cartShow} handleFunction = {handleCartSlide} />
     </>
   );
 };

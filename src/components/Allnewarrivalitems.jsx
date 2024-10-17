@@ -24,7 +24,7 @@ const Allnewarrivalitems = ({ items }) => {
               <span className="text-slate-400 line-through">
                 {items.actualPrice}
               </span>
-              <p className="text-white font-bold ">{items.price}</p>
+              <p className="text-white font-bold">${items.price}</p>
             </div>
           </div>
           <div className="text-white flex gap-2 justify-center items-center">
