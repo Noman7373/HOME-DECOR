@@ -7,7 +7,6 @@ import { RiQuestionAnswerLine } from "react-icons/ri";
 import Newarrival from "./Newarrival";
 import Bestsellers from "./Bestsellers";
 
-
 const Main = () => {
   return (
     <>
@@ -18,8 +17,8 @@ const Main = () => {
               Home of quality furniture
             </h1>
             <p className="text-slate-700 text-[20px] md:text-[27px]">
-              Welcome to HomeDecor , your one-stop shop for stylish furniture
-              and home decor
+              Welcome to HomeStyle Mart , your one-stop shop for stylish
+              furniture and home decor
             </p>
             <div className="flex gap-4">
               <button className="bg-black text-white p-2 rounded-lg hover:bg-green-500">

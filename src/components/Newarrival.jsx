@@ -13,6 +13,7 @@ import Allnewarrivalitems from "./Allnewarrivalitems";
 const Newarrival = () => {
   const newArrivalData = [
     {
+      category: "New Arrival",
       id: 0,
       name: "Stool",
       img: img1,
@@ -24,6 +25,7 @@ const Newarrival = () => {
       icon2: <BiCartAdd />,
     },
     {
+      category: "New Arrival",
       id: 1,
       name: "SOFA",
       img: img2,
@@ -35,6 +37,7 @@ const Newarrival = () => {
       icon2: <BiCartAdd />,
     },
     {
+      category: "New Arrival",
       id: 2,
       name: "EXPENSIVE",
       img: img3,
@@ -46,6 +49,7 @@ const Newarrival = () => {
       icon2: <BiCartAdd />,
     },
     {
+      category: "New Arrival",
       id: 3,
       name: "COFEE TABLE",
       img: img4,
@@ -57,6 +61,7 @@ const Newarrival = () => {
       icon2: <BiCartAdd />,
     },
     {
+      category: "New Arrival",
       id: 4,
       name: "OFFICE CHAIR",
       img: img5,
@@ -68,6 +73,7 @@ const Newarrival = () => {
       icon2: <BiCartAdd />,
     },
     {
+      category: "New Arrival",
       id: 5,
       name: "OUTDOOR",
       img: img6,
@@ -79,6 +85,7 @@ const Newarrival = () => {
       icon2: <BiCartAdd />,
     },
     {
+      categorey: "New Arrival",
       id: 6,
       name: "KITCHEN CABINET",
       img: img7,
@@ -90,6 +97,7 @@ const Newarrival = () => {
       icon2: <BiCartAdd />,
     },
     {
+      categorey: "New Arrival",
       id: 7,
       name: "OFFICE",
       img: img8,
@@ -110,9 +118,16 @@ const Newarrival = () => {
         </h1>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {newArrivalData.map((items, id) => {
-          return <Allnewarrivalitems key={id} items={items} />;
-        })}
+        {newArrivalData.map(
+          ({ id, name, img, price, actualPrice, icon1, icon2 }) => {
+            return (
+              <Allnewarrivalitems
+                key={id}
+                items={{ id, name, img, price, actualPrice, icon1, icon2 }}
+              />
+            );
+          }
+        )}
       </div>
     </div>
   );

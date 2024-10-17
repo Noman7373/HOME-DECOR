@@ -17,7 +17,8 @@ const Bestsellers = () => {
   const dispatch = useDispatch();
   const bestSellersProduct = [
     {
-      id: 0,
+      category: "best seller",
+      id: 8,
       name: "QUALTIY RED",
       img: img1,
       description:
@@ -28,7 +29,8 @@ const Bestsellers = () => {
       icon2: <BiCartAdd />,
     },
     {
-      id: 1,
+      category: "best seller",
+      id: 9,
       name: "QUALITY RED",
       img: img2,
       description:
@@ -39,7 +41,8 @@ const Bestsellers = () => {
       icon2: <BiCartAdd />,
     },
     {
-      id: 2,
+      category: "best seller",
+      id: 10,
       name: "QUALITY INTEROR",
       img: img3,
       description:
@@ -50,7 +53,8 @@ const Bestsellers = () => {
       icon2: <BiCartAdd />,
     },
     {
-      id: 3,
+      category: "best seller",
+      id: 11,
       name: "EXPENSIVE SOFA",
       img: img4,
       description:
@@ -61,7 +65,8 @@ const Bestsellers = () => {
       icon2: <BiCartAdd />,
     },
     {
-      id: 4,
+      category: "best seller",
+      id: 12,
       name: "FULL INTEROR",
       img: img5,
       description:
@@ -72,7 +77,8 @@ const Bestsellers = () => {
       icon2: <BiCartAdd />,
     },
     {
-      id: 5,
+      category: "best seller",
+      id: 13,
       name: "HOME TABLE",
       img: img6,
       description:
@@ -83,7 +89,8 @@ const Bestsellers = () => {
       icon2: <BiCartAdd />,
     },
     {
-      id: 6,
+      category: "best seller",
+      id: 14,
       name: "READING SETUP",
       img: img7,
       description:
@@ -94,7 +101,8 @@ const Bestsellers = () => {
       icon2: <BiCartAdd />,
     },
     {
-      id: 7,
+      category: "best seller",
+      id: 15,
       name: "SMOOTH SOFA",
       img: img8,
       description:
