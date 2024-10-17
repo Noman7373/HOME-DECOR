@@ -119,11 +119,29 @@ const Newarrival = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {newArrivalData.map(
-          ({ id, name, img, price, actualPrice, icon1, icon2 }) => {
+          ({
+            id,
+            name,
+            img,
+            description,
+            price,
+            actualPrice,
+            icon1,
+            icon2,
+          }) => {
             return (
               <Allnewarrivalitems
                 key={id}
-                items={{ id, name, img, price, actualPrice, icon1, icon2 }}
+                items={{
+                  id,
+                  name,
+                  img,
+                  description,
+                  price,
+                  actualPrice,
+                  icon1,
+                  icon2,
+                }}
               />
             );
           }

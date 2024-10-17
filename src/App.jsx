@@ -5,6 +5,8 @@ import Main from "./components/Main";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Bedrooms from "./components/Bedrooms";
+import ProductDetail from "./components/ProductDetail";
+import Livingroomsection from "./components/Livingroomsection";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +25,14 @@ function App() {
         {
           path: "/bedroom",
           element: <Bedrooms />,
+        },
+        {
+          path: "/livingroom",
+          element: <Livingroomsection />,
+        },
+        {
+          path: "/products-detail",
+          element: <ProductDetail />,
         },
         {
           path: "/about",

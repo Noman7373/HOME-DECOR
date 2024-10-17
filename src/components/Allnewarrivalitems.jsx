@@ -4,12 +4,21 @@ import { Link } from "react-router-dom";
 import { addToCart } from "../store/cartslice";
 
 const Allnewarrivalitems = ({ items }) => {
-  const { id, name, img, price, actualPrice, icon1, icon2 } = items;
+  const { id, name, img, description, price, actualPrice, icon1, icon2 } =
+    items;
 
   const dispatch = useDispatch();
 
-  function handleAddToCart(id, name, img, price, actualPrice) {
-    let product = { id, name, img, price, actualPrice, quantity: 1 };
+  function handleAddToCart(id, name, img, description, price, actualPrice) {
+    let product = {
+      id,
+      name,
+      img,
+      description,
+      price,
+      actualPrice,
+      quantity: 1,
+    };
     dispatch(addToCart(product));
   }
   return (
@@ -18,7 +27,7 @@ const Allnewarrivalitems = ({ items }) => {
         <p className="absolute top-4 left-2 bg-slate-500 text-white p-1 italic rounded text-[15px] z-10">
           New
         </p>
-        <Link className="max-w-[150px] h-[130px] p-2">
+        <Link to="/products-detail" className="max-w-[150px] h-[130px] p-2">
           <img
             src={img}
             alt={name}
@@ -41,7 +50,9 @@ const Allnewarrivalitems = ({ items }) => {
             </button>
             <button
               className="hover:text-slate-400 text-[30px]"
-              onClick={() => handleAddToCart(id, name, img, price, actualPrice)}
+              onClick={() =>
+                handleAddToCart(id, name, img, description, price, actualPrice)
+              }
             >
               {icon2}
             </button>

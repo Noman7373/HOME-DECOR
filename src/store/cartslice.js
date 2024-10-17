@@ -28,7 +28,6 @@ const cartSlice = createSlice({
 
       if (product && product.quantity < 20) {
         product.quantity += 1;
-        console.log(product.quantity);
       }
     },
     decreamentQuantity(state, action) {

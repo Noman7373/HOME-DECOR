@@ -114,8 +114,16 @@ const Bestsellers = () => {
     },
   ];
 
-  function handleAddToCart(id, name, img, price, actualPrice) {
-    let products = { id, name, img, price, actualPrice, quantity: 1 };
+  function handleAddToCart(id, name, img, description, price, actualPrice) {
+    let products = {
+      id,
+      name,
+      img,
+      description,
+      price,
+      actualPrice,
+      quantity: 1,
+    };
     dispatch(addToCart(products));
   }
   return (
@@ -128,7 +136,16 @@ const Bestsellers = () => {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {bestSellersProduct.map(
-            ({ id, name, img, price, actualPrice, icon1, icon2 }) => {
+            ({
+              id,
+              name,
+              img,
+              description,
+              price,
+              actualPrice,
+              icon1,
+              icon2,
+            }) => {
               return (
                 <div
                   key={id}
@@ -137,7 +154,10 @@ const Bestsellers = () => {
                   <p className="absolute top-4 left-2 bg-slate-500 text-white p-1 italic rounded text-[15px] z-10">
                     New
                   </p>
-                  <Link className="max-w-[150px] h-[130px] p-2">
+                  <Link
+                    to="/products-detail"
+                    className="max-w-[150px] h-[130px] p-2"
+                  >
                     <img
                       src={img}
                       alt={name}
@@ -163,7 +183,14 @@ const Bestsellers = () => {
                       <button
                         className="hover:text-slate-400 text-[30px]"
                         onClick={() =>
-                          handleAddToCart(id, name, img, price, actualPrice)
+                          handleAddToCart(
+                            id,
+                            name,
+                            img,
+                            description,
+                            price,
+                            actualPrice
+                          )
                         }
                       >
                         {icon2}
