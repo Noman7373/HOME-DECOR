@@ -155,7 +155,7 @@ const Bestsellers = () => {
                     New
                   </p>
                   <Link
-                    to="/products-detail"
+                    to={`products-detail/id=${id}`}
                     className="max-w-[150px] h-[130px] p-2"
                   >
                     <img

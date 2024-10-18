@@ -31,7 +31,7 @@ function App() {
           element: <Livingroomsection />,
         },
         {
-          path: "/products-detail",
+          path: "/products-detail/:id",
           element: <ProductDetail />,
         },
         {

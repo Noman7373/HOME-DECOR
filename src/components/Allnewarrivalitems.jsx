@@ -27,7 +27,10 @@ const Allnewarrivalitems = ({ items }) => {
         <p className="absolute top-4 left-2 bg-slate-500 text-white p-1 italic rounded text-[15px] z-10">
           New
         </p>
-        <Link to="/products-detail" className="max-w-[150px] h-[130px] p-2">
+        <Link
+          to={`/products-detail/id=${id}`}
+          className="max-w-[150px] h-[130px] p-2"
+        >
           <img
             src={img}
             alt={name}

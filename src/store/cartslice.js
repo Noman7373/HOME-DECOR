@@ -1,10 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
+import img from "../assets/Bedroom/bed/baby-bed.avif";
+
+let allItemsData = [
+  {
+    id: 1,
+    category: "new Arrival",
+    name: "Bed",
+    img: img,
+  },
+];
 
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
     data: cartItems,
+    allProducts: allItemsData,
   },
   reducers: {
     addToCart(state, action) {
