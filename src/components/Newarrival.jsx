@@ -1,114 +1,14 @@
-import React from "react";
-import img1 from "../assets/circleT.avif";
-import img2 from "../assets/cushion1.avif";
-import img3 from "../assets/cushion2.avif";
-import img4 from "../assets/img2.webp";
-import img5 from "../assets/swinghanging.avif";
-import img6 from "../assets/officeF2.avif";
-import img7 from "../assets/kitchen2.jpg";
-import img8 from "../assets/officeF5.avif";
-import { HiHeart } from "react-icons/hi2";
-import { BiCartAdd } from "react-icons/bi";
+import { useSelector } from "react-redux";
+
 import Allnewarrivalitems from "./Allnewarrivalitems";
 const Newarrival = () => {
-  const newArrivalData = [
-    {
-      category: "New Arrival",
-      id: 0,
-      name: "Stool",
-      img: img1,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 250,
-      actualPrice: "$240",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "New Arrival",
-      id: 1,
-      name: "SOFA",
-      img: img2,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 270,
-      actualPrice: "$250",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "New Arrival",
-      id: 2,
-      name: "EXPENSIVE",
-      img: img3,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 300,
-      actualPrice: "$250",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "New Arrival",
-      id: 3,
-      name: "COFEE TABLE",
-      img: img4,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 320,
-      actualPrice: "$290",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "New Arrival",
-      id: 4,
-      name: "OFFICE CHAIR",
-      img: img5,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 150,
-      actualPrice: "$135",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "New Arrival",
-      id: 5,
-      name: "OUTDOOR",
-      img: img6,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 210,
-      actualPrice: "$190",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      categorey: "New Arrival",
-      id: 6,
-      name: "KITCHEN CABINET",
-      img: img7,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 270,
-      actualPrice: "$250",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      categorey: "New Arrival",
-      id: 7,
-      name: "OFFICE",
-      img: img8,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 350,
-      actualPrice: "$320",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-  ];
+  // Get Data from Cartslice store
+  const product = useSelector((state) => state.cart.allProducts);
+  
+  // Mataching items category the data to the input
+  const getAllProducts = product.filter(
+    (items) => items.category == "New_Arrival"
+  );
 
   return (
     <div className="py-[50px]">
@@ -118,33 +18,12 @@ const Newarrival = () => {
         </h1>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {newArrivalData.map(
-          ({
-            id,
-            name,
-            img,
-            description,
-            price,
-            actualPrice,
-            icon1,
-            icon2,
-          }) => {
-            return (
-              <Allnewarrivalitems
-                key={id}
-                items={{
-                  id,
-                  name,
-                  img,
-                  description,
-                  price,
-                  actualPrice,
-                  icon1,
-                  icon2,
-                }}
-              />
-            );
-          }
+        {getAllProducts.length > 0 ? (
+          getAllProducts.map((items) => {
+            return <Allnewarrivalitems key={items.id} items={items} />;
+          })
+        ) : (
+          <p>No Products Available</p>
         )}
       </div>
     </div>

@@ -1,46 +1,86 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { addToCart } from "../store/cartslice";
 
 const ProductDetail = () => {
   const { id } = useParams();
-  console.log(id);
+  const dispatch = useDispatch();
+
   const product = useSelector((state) => state.cart.allProducts);
-  const { category, name, img } = product[0];
+
+  let individualProductDetails = product.filter((items) => items.id == id);
+
+  let fetchData = individualProductDetails.map((items) => {
+    return {
+      id: items.id,
+      name: items.name,
+      img: items.img,
+      description: items.description,
+      price: items.price,
+      actualPrice: items.actualPrice,
+    };
+  });
+  const { name, img, description, price, actualPrice } = fetchData[0] || {};
+
+  // handle Addtocart Function
+  function handleAddToCart(id, name, img, description, price, actualPrice) {
+    let addToCartItems = {
+      id,
+      name,
+      img,
+      description,
+      price,
+      actualPrice,
+      quantity: 1,
+    };
+    dispatch(addToCart(addToCartItems));
+  }
 
   return (
     <>
-      <div className="px-[30px] py-[70-px] mt-[130px] bg-slate-100">
-        <div className="bg-slate-100  flex md:flex-row flex-col justify-around rounded-lg overflow-y-auto">
-          <div className="max-w-[350px]">
-            <img src={img} alt="" className="w-full" />
+      <div className="px-[30px] py-[70-px] pt-[130px] bg-[#F7F7F7]">
+        <div className="bg-[#F7F7F7] max-h-[400px] flex md:flex-row flex-col justify-around gap-4 rounded-lg overflow-y-hidden pt-4 pb-2">
+          <div className="max-w-[300px] h-full">
+            <img src={img} alt="" className="w-full bg-[#F7F7F7]" />
           </div>
 
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between gap-2">
             <h3 className="uppercase text-[16px] text-slate-800 font-semibold">
               Name
             </h3>
-            <h1 className="uppercase text-black font-bold text-[22px]"></h1>
+            <h1 className="uppercase text-black font-bold text-[22px]">
+              {name}
+            </h1>
             <p className="text-[16px] uppercase text-slate-800 font-semibold">
               Price
             </p>
-            <p className="flex text-[16px]">
-              fsd{" "}
-              <span className="line-through text-[16px] text-slate-600"></span>
+            <p className="flex text-[16px] gap-4">
+              ${price}
+              <span className="line-through text-[16px] text-slate-600">
+                {actualPrice}
+              </span>
             </p>
             <h3 className="text-[16px] uppercase text-slate-800">
               Description
             </h3>
             <p className="text-[15px] text-slate-600 max-w-[500px]">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sed
-              ut ab vero ea unde odio explicabo minus nobis obcaecati?
-              Excepturi, quas quia. Impedit animi reprehenderit praesentium
-              soluta? Totam, sunt!
+              {description}
             </p>
             <div className="flex flex-row justify-start items-start gap-4 my-5">
               <button
                 className="bg-slate-800 px-[22px] py-[10px] transition ease-in delay-150 hover:-translate-y-1 hover:scale-100 rounded text-[14px] md:text-[17px]
               text-slate-50 border"
+                onClick={() =>
+                  handleAddToCart(
+                    id,
+                    name,
+                    img,
+                    description,
+                    price,
+                    actualPrice
+                  )
+                }
               >
                 Add To Cart
               </button>

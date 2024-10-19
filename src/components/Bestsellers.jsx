@@ -1,118 +1,19 @@
-import img1 from "../assets/cushion7.jpg";
-import img2 from "../assets/Best Seller/chair-realistic-illustration_1284-9507.avif";
-import img3 from "../assets/Best Seller/cushion1.avif";
-import img4 from "../assets/Best Seller/sittingR6.avif";
-import img5 from "../assets/Best Seller/cushion6.webp";
-import img6 from "../assets/Best Seller/officeF8.avif";
-import img7 from "../assets/Best Seller/officeF9.avif";
-import img8 from "../assets/Best Seller/sittingR4.avif";
-
 import { HiHeart } from "react-icons/hi2";
 import { BiCartAdd } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../store/cartslice";
 
 const Bestsellers = () => {
   const dispatch = useDispatch();
-  const bestSellersProduct = [
-    {
-      category: "best seller",
-      id: 8,
-      name: "QUALTIY RED",
-      img: img1,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 250,
-      actualPrice: "$240",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "best seller",
-      id: 9,
-      name: "QUALITY RED",
-      img: img2,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 270,
-      actualPrice: "$250",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "best seller",
-      id: 10,
-      name: "QUALITY INTEROR",
-      img: img3,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 300,
-      actualPrice: "$250",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "best seller",
-      id: 11,
-      name: "EXPENSIVE SOFA",
-      img: img4,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 320,
-      actualPrice: "$290",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "best seller",
-      id: 12,
-      name: "FULL INTEROR",
-      img: img5,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 150,
-      actualPrice: "$135",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "best seller",
-      id: 13,
-      name: "HOME TABLE",
-      img: img6,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 210,
-      actualPrice: "$190",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "best seller",
-      id: 14,
-      name: "READING SETUP",
-      img: img7,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 270,
-      actualPrice: "$250",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-    {
-      category: "best seller",
-      id: 15,
-      name: "SMOOTH SOFA",
-      img: img8,
-      description:
-        "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-      price: 350,
-      actualPrice: "$320",
-      icon1: <HiHeart />,
-      icon2: <BiCartAdd />,
-    },
-  ];
+
+  // Get Data from Cartslice store
+  const allBestProducts = useSelector((state) => state.cart.allProducts);
+
+  // Mataching items category the data to the input
+  const filterBestProducts = allBestProducts.filter(
+    (items) => items.category == "Best_Seller"
+  );
 
   function handleAddToCart(id, name, img, description, price, actualPrice) {
     let products = {
@@ -135,17 +36,8 @@ const Bestsellers = () => {
           </h1>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {bestSellersProduct.map(
-            ({
-              id,
-              name,
-              img,
-              description,
-              price,
-              actualPrice,
-              icon1,
-              icon2,
-            }) => {
+          {filterBestProducts.map(
+            ({ id, name, img, description, price, actualPrice }) => {
               return (
                 <div
                   key={id}
@@ -178,7 +70,7 @@ const Bestsellers = () => {
                     </div>
                     <div className="text-white flex gap-2 justify-center items-center">
                       <button className="hover:text-slate-400 text-[30px]">
-                        {icon1}
+                        <HiHeart />
                       </button>
                       <button
                         className="hover:text-slate-400 text-[30px]"
@@ -193,7 +85,7 @@ const Bestsellers = () => {
                           )
                         }
                       >
-                        {icon2}
+                        <BiCartAdd />
                       </button>
                     </div>
                   </div>

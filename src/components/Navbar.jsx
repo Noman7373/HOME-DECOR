@@ -4,16 +4,18 @@ import { FaHeart } from "react-icons/fa";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import Productcart from "./Productcart";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [cartShow, setCartShow] = useState(false);
+  const addToCartProductQuantity = useSelector((state) => state.cart.data);
 
   function handleCartSlide() {
     setCartShow((prev) => !prev);
   }
   return (
     <>
-      <nav className="h-24 w-full bg-black flex justify-around text-center items-center text-white shadow-2xl fixed z-20">
+      <nav className=" h-24 w-full bg-black flex justify-around text-center items-center text-white shadow-2xl fixed z-20">
         <div>
           <h1 className="uppercase text-[20px] md:text-[27px] text-slate-100 font-bold">
             HomeStyle Mart
@@ -30,10 +32,10 @@ const Navbar = () => {
           <Link to="/livingroom">
             <li>Living Room</li>
           </Link>
-          <Link>
+          <Link to="/dinningroom">
             <li>Dinning Room</li>
           </Link>
-          <Link>
+          <Link to="/office">
             <li>Office</li>
           </Link>
           <Link>
@@ -55,7 +57,13 @@ const Navbar = () => {
             Signin
           </button>
         </div>
-
+        {addToCartProductQuantity.length > 0 ? (
+          <span className="absolute top-4 right-7 text-white">
+            {addToCartProductQuantity.length}
+          </span>
+        ) : (
+          <span className="absolute top-4 right-7 text-white">0</span>
+        )}
         <div className="flex gap-2">
           <button className="hover:text-slate-400 text-[30px]">
             <BiSearch />
@@ -63,6 +71,7 @@ const Navbar = () => {
           <button className="hover:text-slate-400 text-[30px]">
             <FaHeart />
           </button>
+
           <button
             className="hover:text-slate-400 text-[30px]"
             onClick={handleCartSlide}

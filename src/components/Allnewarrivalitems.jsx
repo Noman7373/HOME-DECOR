@@ -2,12 +2,12 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../store/cartslice";
+import { HiHeart } from "react-icons/hi2";
+import { BiCartAdd } from "react-icons/bi";
 
 const Allnewarrivalitems = ({ items }) => {
-  const { id, name, img, description, price, actualPrice, icon1, icon2 } =
-    items;
-
   const dispatch = useDispatch();
+  const { id, name, img, description, price, actualPrice } = items;
 
   function handleAddToCart(id, name, img, description, price, actualPrice) {
     let product = {
@@ -28,7 +28,7 @@ const Allnewarrivalitems = ({ items }) => {
           New
         </p>
         <Link
-          to={`/products-detail/id=${id}`}
+          to={`/products-detail/${id}`}
           className="max-w-[150px] h-[130px] p-2"
         >
           <img
@@ -49,7 +49,7 @@ const Allnewarrivalitems = ({ items }) => {
           </div>
           <div className="text-white flex gap-2 justify-center items-center">
             <button className="hover:text-slate-400 text-[30px]">
-              {icon1}
+              <HiHeart />
             </button>
             <button
               className="hover:text-slate-400 text-[30px]"
@@ -57,7 +57,7 @@ const Allnewarrivalitems = ({ items }) => {
                 handleAddToCart(id, name, img, description, price, actualPrice)
               }
             >
-              {icon2}
+              <BiCartAdd />
             </button>
           </div>
         </div>

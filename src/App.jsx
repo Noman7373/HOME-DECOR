@@ -7,6 +7,8 @@ import Contact from "./components/Contact";
 import Bedrooms from "./components/Bedrooms";
 import ProductDetail from "./components/ProductDetail";
 import Livingroomsection from "./components/Livingroomsection";
+import DiningRoom from "./components/DiningRoom";
+import Officeitems from "./components/Officeitems";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +31,14 @@ function App() {
         {
           path: "/livingroom",
           element: <Livingroomsection />,
+        },
+        {
+          path: "/dinningroom",
+          element: <DiningRoom />,
+        },
+        {
+          path: "/office",
+          element: <Officeitems />,
         },
         {
           path: "/products-detail/:id",

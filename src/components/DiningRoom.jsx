@@ -5,12 +5,11 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../store/cartslice";
 
-const Bedrooms = () => {
-  const [input, setinputValue] = useState("beds");
+const DiningRoom = () => {
+  const [input, setinputValue] = useState("Dinning Table");
   const dispatch = useDispatch();
-
   // Get Data from Cartslice store
-  const allBedroomsItems = useSelector((state) => state.cart.allProducts);
+  const livingRoomItems = useSelector((state) => state.cart.allProducts);
 
   function handleAddToCart(id, name, img, description, price, actualPrice) {
     let products = {
@@ -26,13 +25,15 @@ const Bedrooms = () => {
   }
   const handleFilter = (e) => {
     let inputValue = e.target.value;
+    if (inputValue == "") {
+      inputValue = "BEDS";
+    }
     setinputValue(inputValue);
   };
   // Mataching items category the data to the input
-  let allBedroomsProducts = allBedroomsItems.filter((items) =>
-    items.category.toUpperCase().includes(input.toUpperCase())
+  const allBedroomsProducts = livingRoomItems.filter(
+    (items) => items.category.toUpperCase() == input.toUpperCase()
   );
-
   return (
     <>
       <div className="py-[40px] pt-[130px] px-6">
@@ -52,9 +53,9 @@ const Bedrooms = () => {
                 value={input}
                 className="w-full bg-black text-white px-2 py-2 rounded cursor-pointer md:text-[18px]"
               >
-                <option value="Beds">Beds</option>
-                <option value="Dressers">Dressers</option>
-                <option value="Nightstands">Nightstands</option>
+                <option value="Dinning Table">Dinning Table</option>
+                <option value="Dinning Cabinet">Dinning Cabinet</option>
+                <option value="Dinning Chair">Dinning Chair</option>
               </select>
             </form>
           </div>
@@ -123,4 +124,4 @@ const Bedrooms = () => {
   );
 };
 
-export default Bedrooms;
+export default DiningRoom;
