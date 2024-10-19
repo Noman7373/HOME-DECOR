@@ -118,6 +118,14 @@ import img113 from "../assets/Office/Office Chair/officeF7.avif";
 import img114 from "../assets/Office/Office Chair/officeF8.avif";
 import img115 from "../assets/Office/Office Chair/officeF9.avif";
 import img116 from "../assets/Office/Office Chair/rae.avif";
+import img117 from "../assets/Office/Office desk/apartment.avif";
+import img118 from "../assets/Office/Office desk/ardel.avif";
+import img119 from "../assets/Office/Office desk/florence.avif";
+import img120 from "../assets/Office/Office desk/griffit.avif";
+import img121 from "../assets/Office/Office desk/isla.avif";
+import img122 from "../assets/Office/Office desk/ringo.avif";
+import img123 from "../assets/Office/Office desk/roqque.avif";
+import img124 from "../assets/Office/Office desk/somer.avif";
 
 let allItemsData = [
   {
@@ -1280,6 +1288,97 @@ let allItemsData = [
     price: 280,
     actualPrice: "$330",
   },
+  {
+    category: "Office Desk",
+    id: 115,
+    name: "Apartment",
+    img: img117,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 200,
+    actualPrice: "$230",
+  },
+  {
+    category: "Office Desk",
+    id: 116,
+    name: "Ardel",
+    img: img118,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 150,
+    actualPrice: "$210",
+  },
+  {
+    category: "Office Desk",
+    id: 117,
+    name: "florence",
+    img: img119,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 170,
+    actualPrice: "$210",
+  },
+  {
+    category: "Office Desk",
+    id: 118,
+    name: "griffit",
+    img: img120,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 190,
+    actualPrice: "$250",
+  },
+  {
+    category: "Isla Stand",
+    id: 119,
+    name: "toscano",
+    img: img121,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 150,
+    actualPrice: "210",
+  },
+  {
+    category: "Office Desk",
+    id: 120,
+    name: "ringo",
+    img: img122,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 160,
+    actualPrice: "180",
+  },
+  {
+    category: "Office Desk",
+    id: 121,
+    name: "roqque",
+    img: img123,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 150,
+    actualPrice: "$200",
+  },
+  {
+    category: "Office Desk",
+    id: 122,
+    name: "toscano",
+    img: img124,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Office Shelves",
+    id: 123,
+    name: "toscano",
+    img: img124,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+
 ];
 
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
