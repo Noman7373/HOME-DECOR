@@ -6,6 +6,7 @@ import { BsPaypal } from "react-icons/bs";
 import { RiQuestionAnswerLine } from "react-icons/ri";
 import Newarrival from "./Newarrival";
 import Bestsellers from "./Bestsellers";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -21,12 +22,16 @@ const Main = () => {
               furniture and home decor
             </p>
             <div className="flex gap-4">
-              <button className="bg-black text-white p-2 rounded-lg hover:bg-green-500">
-                Explore
-              </button>
-              <button className="bg-slate-400 text-white py-2 px-2 rounded-lg hover:bg-green-500">
-                Get Started
-              </button>
+              <Link to="/bedroom">
+                <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-green-500">
+                  Explore
+                </button>
+              </Link>
+              <Link to="/contact">
+                <button className="bg-slate-400 text-white py-2 px-4 rounded-lg hover:bg-green-500">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
           <div className="pt-4 max-w-[350px] sm:max-w-[500px] md:w-full">

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { addToCart } from "../store/cartslice";
+import { addProductWishList, addToCart } from "../store/cartslice";
 import { HiHeart } from "react-icons/hi2";
 import { BiCartAdd } from "react-icons/bi";
 
@@ -20,6 +20,11 @@ const Allnewarrivalitems = ({ items }) => {
       quantity: 1,
     };
     dispatch(addToCart(product));
+  }
+
+  function handleWishList(id, name, img, price, actualPrice) {
+    let favProducts = { id, name, img, price, actualPrice };
+    dispatch(addProductWishList(favProducts));
   }
   return (
     <>
@@ -48,7 +53,10 @@ const Allnewarrivalitems = ({ items }) => {
             </div>
           </div>
           <div className="text-white flex gap-2 justify-center items-center">
-            <button className="hover:text-slate-400 text-[30px]">
+            <button
+              className="hover:text-slate-400 text-[30px]"
+              onClick={() => handleWishList(id, name, img, price, actualPrice)}
+            >
               <HiHeart />
             </button>
             <button

@@ -8,10 +8,10 @@ import {
 } from "../store/cartslice";
 
 const Productcart = ({ showCart, handleFunction }) => {
-  const cartItems = useSelector((state) => state.cart.data);
+  const addToCartProducts = useSelector((state) => state.cart.data);
 
   // Subtotal of All addtocard items
-  const totalAmout = cartItems.reduce(
+  const totalAmout = addToCartProducts.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
@@ -51,8 +51,8 @@ const Productcart = ({ showCart, handleFunction }) => {
             showCart ? "overflow-y-auto mt-[60px] pb-[120px]" : "hidden"
           }`}
         >
-          {Array.isArray(cartItems) && cartItems.length > 0 ? (
-            cartItems.map(({ id, name, img, price, actualPrice, quantity }) => (
+          {Array.isArray(addToCartProducts) && addToCartProducts.length > 0 ? (
+            addToCartProducts.map(({ id, name, img, price, actualPrice, quantity }) => (
               <div
                 key={id}
                 className="flex items-center h-[200px] justify-around gap-2 p-2 border-b-[2px] border-b-slate-700"
@@ -106,7 +106,7 @@ const Productcart = ({ showCart, handleFunction }) => {
           )}
         </div>
 
-        {cartItems.length > 0 ? (
+        {addToCartProducts.length > 0 ? (
           <div
             className={`${
               showCart

@@ -3,15 +3,20 @@ import { BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
-import Productcart from "./Productcart";
 import { useSelector } from "react-redux";
+import Productcart from "./Productcart";
+import Whishlist from "./Whishlist";
 
 const Navbar = () => {
   const [cartShow, setCartShow] = useState(false);
+  const [WishlistShow, setWishlistShow] = useState(false);
   const addToCartProductQuantity = useSelector((state) => state.cart.data);
 
   function handleCartSlide() {
     setCartShow((prev) => !prev);
+  }
+  function handleWishlistSlide() {
+    setWishlistShow((prev) => !prev);
   }
   return (
     <>
@@ -38,13 +43,10 @@ const Navbar = () => {
           <Link to="/office">
             <li>Office</li>
           </Link>
-          <Link>
-            <li>Outdoor</li>
-          </Link>
-          <Link>
+          <Link to="/Decor">
             <li>Decor</li>
           </Link>
-          <Link>
+          <Link to="/kitchen">
             <li>Kitchen</li>
           </Link>
         </ul>
@@ -68,7 +70,10 @@ const Navbar = () => {
           <button className="hover:text-slate-400 text-[30px]">
             <BiSearch />
           </button>
-          <button className="hover:text-slate-400 text-[30px]">
+          <button
+            className="hover:text-slate-400 text-[30px]"
+            onClick={handleWishlistSlide}
+          >
             <FaHeart />
           </button>
 
@@ -82,6 +87,10 @@ const Navbar = () => {
       </nav>
       {/* imporing add to cart side bar components */}
       <Productcart showCart={cartShow} handleFunction={handleCartSlide} />
+      <Whishlist
+        showWishList={WishlistShow}
+        handleWishListFunction={handleWishlistSlide}
+      />
     </>
   );
 };

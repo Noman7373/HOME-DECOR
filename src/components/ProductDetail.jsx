@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCart } from "../store/cartslice";
+import { addProductWishList, addToCart } from "../store/cartslice";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -35,6 +35,12 @@ const ProductDetail = () => {
       quantity: 1,
     };
     dispatch(addToCart(addToCartItems));
+  }
+
+  // handle Wishlist products
+  function handleWishList(id, name, img, price, actualPrice) {
+    let favProducts = { id, name, img, price, actualPrice };
+    dispatch(addProductWishList(favProducts));
   }
 
   return (
@@ -87,6 +93,9 @@ const ProductDetail = () => {
               <button
                 className="px-[22px] py-[10px] transition ease-in delay-150 hover:-translate-y-1 hover:scale-100 rounded text-[14px] md:text-[17px]
               text-slate-800 border border-slate-800"
+                onClick={() =>
+                  handleWishList(id, name, img, price, actualPrice)
+                }
               >
                 Add To Wishlist
               </button>

@@ -1,15 +1,19 @@
+import { HiHeart } from "react-icons/hi2";
 import { BiCartAdd } from "react-icons/bi";
-import { HiHeart } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProductWishList, addToCart } from "../store/cartslice";
 
-const DiningRoom = () => {
-  const [input, setinputValue] = useState("Dinning Table");
+const KitchenProducts = () => {
   const dispatch = useDispatch();
+
   // Get Data from Cartslice store
-  const livingRoomItems = useSelector((state) => state.cart.allProducts);
+  const allBestProducts = useSelector((state) => state.cart.allProducts);
+
+  // Mataching items category the data to the input
+  const filterBestProducts = allBestProducts.filter(
+    (items) => items.category == "KITCHEN"
+  );
 
   function handleAddToCart(id, name, img, description, price, actualPrice) {
     let products = {
@@ -25,50 +29,20 @@ const DiningRoom = () => {
   }
 
   // handle Wishlist products
-
   function handleWishList(id, name, img, price, actualPrice) {
     let favProducts = { id, name, img, price, actualPrice };
     dispatch(addProductWishList(favProducts));
   }
-  const handleFilter = (e) => {
-    let inputValue = e.target.value;
-    if (inputValue == "") {
-      inputValue = "BEDS";
-    }
-    setinputValue(inputValue);
-  };
-  // Mataching items category the data to the input
-  const allBedroomsProducts = livingRoomItems.filter(
-    (items) => items.category.toUpperCase() == input.toUpperCase()
-  );
   return (
     <>
       <div className="py-[40px] pt-[130px] px-6">
-        <div className="flex md:px-[20px] justify-between items-center">
+        <div>
           <h1 className="uppercase my-[20px] p-1 text-center border-b-[4px] border-slate-500 shadow-lg w-fit text-[25px] md:text-[40px]">
-            {input}
+            KITCHEN
           </h1>
-          <div className="w-[150px] flex flex-col gap-1 max-[410px]:w-[120px]">
-            <p className="text-black font-semibold text-[20px] md:text-[22px]">
-              Filter Items
-            </p>
-            <form action="#">
-              <select
-                onChange={(e) => handleFilter(e)}
-                name="select"
-                id="select"
-                value={input}
-                className="w-full bg-black text-white px-2 py-2 rounded cursor-pointer md:text-[18px]"
-              >
-                <option value="Dinning Table">Dinning Table</option>
-                <option value="Dinning Cabinet">Dinning Cabinet</option>
-                <option value="Dinning Chair">Dinning Chair</option>
-              </select>
-            </form>
-          </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {allBedroomsProducts.map(
+          {filterBestProducts.map(
             ({ id, name, img, description, price, actualPrice }) => {
               return (
                 <div
@@ -136,4 +110,4 @@ const DiningRoom = () => {
   );
 };
 
-export default DiningRoom;
+export default KitchenProducts;

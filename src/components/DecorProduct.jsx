@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProductWishList, addToCart } from "../store/cartslice";
-
-const DiningRoom = () => {
-  const [input, setinputValue] = useState("Dinning Table");
+const DecorProduct = () => {
+  const [input, setinputValue] = useState("Lights");
   const dispatch = useDispatch();
   // Get Data from Cartslice store
   const livingRoomItems = useSelector((state) => state.cart.allProducts);
@@ -24,8 +23,7 @@ const DiningRoom = () => {
     dispatch(addToCart(products));
   }
 
-  // handle Wishlist products
-
+  // Handle Wishlist Products
   function handleWishList(id, name, img, price, actualPrice) {
     let favProducts = { id, name, img, price, actualPrice };
     dispatch(addProductWishList(favProducts));
@@ -60,9 +58,9 @@ const DiningRoom = () => {
                 value={input}
                 className="w-full bg-black text-white px-2 py-2 rounded cursor-pointer md:text-[18px]"
               >
-                <option value="Dinning Table">Dinning Table</option>
-                <option value="Dinning Cabinet">Dinning Cabinet</option>
-                <option value="Dinning Chair">Dinning Chair</option>
+                <option value="Lights">Lights</option>
+                <option value="Pillows">Pillows</option>
+                <option value="Throw">Throw</option>
               </select>
             </form>
           </div>
@@ -136,4 +134,4 @@ const DiningRoom = () => {
   );
 };
 
-export default DiningRoom;
+export default DecorProduct;

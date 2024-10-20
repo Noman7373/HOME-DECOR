@@ -2,7 +2,7 @@ import { HiHeart } from "react-icons/hi2";
 import { BiCartAdd } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../store/cartslice";
+import { addProductWishList, addToCart } from "../store/cartslice";
 
 const Bestsellers = () => {
   const dispatch = useDispatch();
@@ -27,6 +27,12 @@ const Bestsellers = () => {
     };
     dispatch(addToCart(products));
   }
+
+  // Handle Wishlist Products
+  function handleWishList(id, name, img, price, actualPrice) {
+    let favProducts = { id, name, img, price, actualPrice };
+    dispatch(addProductWishList(favProducts));
+  }
   return (
     <>
       <div className="py-[40px]">
@@ -47,7 +53,7 @@ const Bestsellers = () => {
                     New
                   </p>
                   <Link
-                    to={`products-detail/id=${id}`}
+                    to={`products-detail/${id}`}
                     className="max-w-[150px] h-[130px] p-2"
                   >
                     <img
@@ -69,7 +75,12 @@ const Bestsellers = () => {
                       </div>
                     </div>
                     <div className="text-white flex gap-2 justify-center items-center">
-                      <button className="hover:text-slate-400 text-[30px]">
+                      <button
+                        className="hover:text-slate-400 text-[30px]"
+                        onClick={() =>
+                          handleWishList(id, name, img, price, actualPrice)
+                        }
+                      >
                         <HiHeart />
                       </button>
                       <button

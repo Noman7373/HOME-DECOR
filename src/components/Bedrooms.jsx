@@ -3,7 +3,7 @@ import { HiHeart } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../store/cartslice";
+import { addProductWishList, addToCart } from "../store/cartslice";
 
 const Bedrooms = () => {
   const [input, setinputValue] = useState("beds");
@@ -23,6 +23,13 @@ const Bedrooms = () => {
       quantity: 1,
     };
     dispatch(addToCart(products));
+  }
+
+  // Handle Wishlist products
+
+  function handleWishList(id, name, img, price, actualPrice) {
+    let favProducts = { id, name, img, price, actualPrice };
+    dispatch(addProductWishList(favProducts));
   }
   const handleFilter = (e) => {
     let inputValue = e.target.value;
@@ -93,7 +100,12 @@ const Bedrooms = () => {
                       </div>
                     </div>
                     <div className="text-white flex gap-2 justify-center items-center">
-                      <button className="hover:text-slate-400 text-[30px]">
+                      <button
+                        className="hover:text-slate-400 text-[30px]"
+                        onClick={() =>
+                          handleWishList(id, name, img, price, actualPrice)
+                        }
+                      >
                         <HiHeart />
                       </button>
                       <button

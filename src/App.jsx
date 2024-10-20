@@ -9,6 +9,8 @@ import ProductDetail from "./components/ProductDetail";
 import Livingroomsection from "./components/Livingroomsection";
 import DiningRoom from "./components/DiningRoom";
 import Officeitems from "./components/Officeitems";
+import DecorProduct from "./components/DecorProduct";
+import KitchenProducts from "./components/KitchenProducts";
 
 function App() {
   const router = createBrowserRouter([
@@ -39,6 +41,14 @@ function App() {
         {
           path: "/office",
           element: <Officeitems />,
+        },
+        {
+          path: "/Decor",
+          element: <DecorProduct />,
+        },
+        {
+          path: "/kitchen",
+          element: <KitchenProducts />,
         },
         {
           path: "/products-detail/:id",

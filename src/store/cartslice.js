@@ -126,6 +126,49 @@ import img121 from "../assets/Office/Office desk/isla.avif";
 import img122 from "../assets/Office/Office desk/ringo.avif";
 import img123 from "../assets/Office/Office desk/roqque.avif";
 import img124 from "../assets/Office/Office desk/somer.avif";
+import img125 from "../assets/Office/Office shelve/bookShelf.avif";
+import img126 from "../assets/Office/Office shelve/crosley.avif";
+import img127 from "../assets/Office/Office shelve/hazel.avif";
+import img128 from "../assets/Office/Office shelve/lois.avif";
+import img129 from "../assets/Office/Office shelve/owen.avif";
+import img130 from "../assets/Office/Office shelve/roque.avif";
+import img131 from "../assets/Office/Office shelve/rigo.avif";
+// Decor/Ligths
+import img132 from "../assets/Decor/Light/bria-table-lamp.avif";
+import img133 from "../assets/Decor/Light/burke-floor-lamp.avif";
+import img134 from "../assets/Decor/Light/carrie-table-lamp.avif";
+import img135 from "../assets/Decor/Light/dame-table-lamp.avif";
+import img136 from "../assets/Decor/Light/lili-table-lamp.avif";
+import img137 from "../assets/Decor/Light/mandi-pendant.avif";
+import img138 from "../assets/Decor/Light/quincy-floor-lamp.avif";
+import img139 from "../assets/Decor/Light/savannah-table-lamp.avif";
+// Decor/Pillows
+import img140 from "../assets/Decor/Pillow/blsck pillow.avif";
+import img141 from "../assets/Decor/Pillow/jive-pillow.avif";
+import img142 from "../assets/Decor/Pillow/minka-lumbar-pillow.avif";
+import img143 from "../assets/Decor/Pillow/minka-pleated-round-pillow.avif";
+import img144 from "../assets/Decor/Pillow/peacock-decorative-knife-edge-pillows.avif";
+import img145 from "../assets/Decor/Pillow/pillow1.avif";
+import img146 from "../assets/Decor/Pillow/square-pillow.avif";
+import img147 from "../assets/Decor/Pillow/sunny-chevy-decorative-knife-edge-pillows.avif";
+//Decor/Rug
+import img148 from "../assets/Decor/Throw/aspen-throw.avif";
+import img149 from "../assets/Decor/Throw/boucle-stripe-throw.avif";
+import img150 from "../assets/Decor/Throw/brooklyn-throw.avif";
+import img151 from "../assets/Decor/Throw/giana-throw.avif";
+import img152 from "../assets/Decor/Throw/piper-throw.avif";
+import img153 from "../assets/Decor/Throw/pom-pom-slub-throw.avif";
+import img154 from "../assets/Decor/Throw/yukimi-throw.avif";
+import img155 from "../assets/Decor/Throw/zola-throw.avif";
+// Kitchen Products
+import img156 from "../assets/Kitchen/kitchen.avif";
+import img157 from "../assets/Kitchen/kitchen1.avif";
+import img158 from "../assets/Kitchen/kitchen2.jpg";
+import img159 from "../assets/Kitchen/kitchen3.jpg";
+import img160 from "../assets/Kitchen/kitchen4.avif";
+import img161 from "../assets/Kitchen/kitchen5.avif";
+import img162 from "../assets/Kitchen/kitchen6.avif";
+import img163 from "../assets/Kitchen/kitchen7.avif";
 
 let allItemsData = [
   {
@@ -1371,22 +1414,403 @@ let allItemsData = [
   {
     category: "Office Shelves",
     id: 123,
-    name: "toscano",
-    img: img124,
+    name: "crosley",
+    img: img125,
     description:
       "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
     price: 50,
     actualPrice: "$70",
   },
-
+  {
+    category: "Office Shelves",
+    id: 124,
+    name: "hazel",
+    img: img126,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Office Shelves",
+    id: 125,
+    name: "lois",
+    img: img127,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Office Shelves",
+    id: 126,
+    name: "rigo",
+    img: img128,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Office Shelves",
+    id: 127,
+    name: "toscano",
+    img: img129,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Office Shelves",
+    id: 128,
+    name: "toscano",
+    img: img130,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Office Shelves",
+    id: 129,
+    name: "toscano",
+    img: img131,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 130,
+    name: "bria tableLamp",
+    img: img132,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 131,
+    name: "Burke FloorLamp",
+    img: img133,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 132,
+    name: "carrie TableLamp",
+    img: img134,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 133,
+    name: "dame TableLamp",
+    img: img135,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 134,
+    name: "lili TableLamp",
+    img: img136,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 135,
+    name: "mandi Pendant",
+    img: img137,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 136,
+    name: "Quincy FloorLamp",
+    img: img138,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "LIGHTS",
+    id: 137,
+    name: "savannah TableLamp",
+    img: img139,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Pillows",
+    id: 138,
+    name: "Black Pillow",
+    img: img140,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Pillows",
+    id: 139,
+    name: "jive Pillow",
+    img: img141,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Pillows",
+    id: 140,
+    name: "Minka Lumbar",
+    img: img142,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$130",
+  },
+  {
+    category: "Pillows",
+    id: 141,
+    name: "Black Pillow",
+    img: img143,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 50,
+    actualPrice: "$70",
+  },
+  {
+    category: "Pillows",
+    id: 142,
+    name: "minka Pleat",
+    img: img144,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 60,
+    actualPrice: "$100",
+  },
+  {
+    category: "Pillows",
+    id: 143,
+    name: "peacock",
+    img: img145,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 70,
+    actualPrice: "$130",
+  },
+  {
+    category: "square PIllow",
+    id: 144,
+    name: "Black Pillow",
+    img: img146,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Pillows",
+    id: 145,
+    name: "chevy Pillow",
+    img: img147,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 146,
+    name: "aspen Throw",
+    img: img148,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 147,
+    name: "boucle Throw",
+    img: img149,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 148,
+    name: "brooklyn Throw",
+    img: img150,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 149,
+    name: "giana Throw",
+    img: img151,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 150,
+    name: "chevy Pillow",
+    img: img152,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 151,
+    name: "piper Throw",
+    img: img153,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 152,
+    name: "pompom Throw",
+    img: img154,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "Throw",
+    id: 153,
+    name: "vukimi Throw",
+    img: img155,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 100,
+    actualPrice: "$150",
+  },
+  {
+    category: "KITCHEN",
+    id: 154,
+    name: "Good cabinet",
+    img: img156,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 300,
+    actualPrice: "$350",
+  },
+  {
+    category: "KITCHEN",
+    id: 155,
+    name: "Kitchen cabinet",
+    img: img157,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 200,
+    actualPrice: "$260",
+  },
+  {
+    category: "KITCHEN",
+    id: 156,
+    name: "Perfect",
+    img: img158,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 450,
+    actualPrice: "$630",
+  },
+  {
+    category: "KITCHEN",
+    id: 157,
+    name: "Quality Cabinet",
+    img: img159,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 300,
+    actualPrice: "$350",
+  },
+  {
+    category: "KITCHEN",
+    id: 158,
+    name: "Cabinet",
+    img: img160,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 400,
+    actualPrice: "$450",
+  },
+  {
+    category: "KITCHEN",
+    id: 159,
+    name: "white",
+    img: img161,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 300,
+    actualPrice: "$350",
+  },
+  {
+    category: "KITCHEN",
+    id: 160,
+    name: "Expensive",
+    img: img162,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 1350,
+    actualPrice: "$1850",
+  },
+  {
+    category: "KITCHEN",
+    id: 161,
+    name: "Quality",
+    img: img163,
+    description:
+      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+    price: 600,
+    actualPrice: "$800",
+  },
 ];
 
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+let wishListProduct = JSON.parse(localStorage.getItem("Wishlist")) || [];
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
     data: cartItems,
     allProducts: allItemsData,
+    userFavProducts: wishListProduct,
   },
   reducers: {
     addToCart(state, action) {
@@ -1419,6 +1843,25 @@ const cartSlice = createSlice({
         product.quantity -= 1;
       }
     },
+    addProductWishList(state, action) {
+      let products = action.payload;
+      const existItems = state.userFavProducts.find(
+        (items) => items.id === products.id
+      );
+      if (existItems) {
+        existItems.price = products.price;
+      } else {
+        state.userFavProducts.push({ ...products });
+      }
+      localStorage.setItem("Wishlist", JSON.stringify(state.userFavProducts));
+    },
+    removeProductsWishList(state, action) {
+      let productId = action.payload;
+      state.userFavProducts = state.userFavProducts.filter(
+        (items) => items.id !== productId
+      );
+      localStorage.setItem("Wishlist", JSON.stringify(state.userFavProducts));
+    },
   },
 });
 
@@ -1427,5 +1870,7 @@ export const {
   removeItemCart,
   increamentQuantity,
   decreamentQuantity,
+  addProductWishList,
+  removeProductsWishList,
 } = cartSlice.actions;
 export default cartSlice.reducer;
