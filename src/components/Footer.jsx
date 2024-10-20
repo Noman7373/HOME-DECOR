@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-2 justify-between">
           <div className="flex flex-col gap-2">
             <h1 className="text-slate-100 text-[25px]">Homedecor</h1>
-            <p className="text-slate-200 flex text-[17px] pt-[20px] max-w-[400px] xs:hidden sm:block">
+            <p className="text-slate-200 flex text-[17px] pt-[20px] max-w-[400px] xs:max-[500px]:hidden sm:block">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

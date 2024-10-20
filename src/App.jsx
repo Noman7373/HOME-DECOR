@@ -11,6 +11,7 @@ import DiningRoom from "./components/DiningRoom";
 import Officeitems from "./components/Officeitems";
 import DecorProduct from "./components/DecorProduct";
 import KitchenProducts from "./components/KitchenProducts";
+// import ScrollTop from "./components/ScrollTop";
 
 function App() {
   const router = createBrowserRouter([
@@ -73,6 +74,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+  
       <ToastContainer />
     </>
   );
