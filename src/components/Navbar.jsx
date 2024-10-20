@@ -60,11 +60,11 @@ const Navbar = () => {
           </button>
         </div>
         {addToCartProductQuantity.length > 0 ? (
-          <span className="absolute top-4 right-7 text-white">
+          <span className="fixed top-4 right-7 text-white">
             {addToCartProductQuantity.length}
           </span>
         ) : (
-          <span className="absolute top-4 right-7 text-white">0</span>
+          <span className="fixed top-4 right-10 text-white">0</span>
         )}
         <div className="flex gap-2">
           <button className="hover:text-slate-400 text-[30px]">
