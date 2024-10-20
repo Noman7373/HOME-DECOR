@@ -46,9 +46,9 @@ const ProductDetail = () => {
   return (
     <>
       <div className="px-[30px] py-[70-px] pt-[130px] bg-[#F7F7F7]">
-        <div className="bg-[#F7F7F7] max-h-[400px] flex md:flex-row flex-col justify-around gap-4 rounded-lg overflow-y-hidden pt-4 pb-2">
-          <div className="max-w-[300px] h-full">
-            <img src={img} alt="" className="w-full bg-[#F7F7F7]" />
+        <div className="bg-[#F7F7F7] md:max-h-[350px] flex md:flex-row justify-around gap-4 rounded-lg overflow-y-hidden pt-4 pb-2 xs:flex-col xs:h-full">
+          <div className="max-w-[300px] md:max-h-[350px]">
+            <img src={img} alt="" className="w-full h-full bg-[#F7F7F7]" />
           </div>
 
           <div className="flex flex-col justify-between gap-2">

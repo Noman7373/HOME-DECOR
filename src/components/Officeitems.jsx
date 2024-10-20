@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addProductWishList, addToCart } from "../store/cartslice";
 
 const Officeitems = () => {
-  const [input, setinputValue] = useState("Dinning Table");
+  const [input, setinputValue] = useState("Dinning Chair");
   const dispatch = useDispatch();
   // Get Data from Cartslice store
   const livingRoomItems = useSelector((state) => state.cart.allProducts);
@@ -31,9 +31,6 @@ const Officeitems = () => {
   }
   const handleFilter = (e) => {
     let inputValue = e.target.value;
-    if (inputValue == "") {
-      inputValue = "BEDS";
-    }
     setinputValue(inputValue);
   };
   // Mataching items category the data to the input

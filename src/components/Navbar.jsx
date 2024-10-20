@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Productcart from "./Productcart";
 import Whishlist from "./Whishlist";
@@ -28,45 +28,64 @@ const Navbar = () => {
         </div>
 
         <ul className="hidden gap-6 text-[16px] md:flex">
-          <Link to="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "border-b" : "text-white")}
+          >
             <li>Home</li>
-          </Link>
-          <Link to="/bedroom">
+          </NavLink>
+          <NavLink
+            to="/bedroom"
+            className={({ isActive }) => (isActive ? "border-b" : "text-white")}
+          >
             <li>Bedroom</li>
-          </Link>
-          <Link to="/livingroom">
+          </NavLink>
+          <NavLink
+            to="/livingroom"
+            className={({ isActive }) => (isActive ? "border-b" : "text-white")}
+          >
             <li>Living Room</li>
-          </Link>
-          <Link to="/dinningroom">
+          </NavLink>
+          <NavLink
+            to="/dinningroom"
+            className={({ isActive }) => (isActive ? "border-b" : "text-white")}
+          >
             <li>Dinning Room</li>
-          </Link>
-          <Link to="/office">
+          </NavLink>
+          <NavLink
+            to="/office"
+            className={({ isActive }) => (isActive ? "border-b" : "text-white")}
+          >
             <li>Office</li>
-          </Link>
-          <Link to="/Decor">
+          </NavLink>
+          <NavLink
+            to="/Decor"
+            className={({ isActive }) => (isActive ? "border-b" : "text-white")}
+          >
             <li>Decor</li>
-          </Link>
-          <Link to="/kitchen">
+          </NavLink>
+          <NavLink
+            to="/kitchen"
+            className={({ isActive }) => (isActive ? "border-b" : "text-white")}
+          >
             <li>Kitchen</li>
-          </Link>
+          </NavLink>
         </ul>
-
-        <div className="flex gap-4">
-          <button className="border border-white p-1 align-middle rounded">
-            Login
-          </button>
-          <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold">
-            Signin
-          </button>
-        </div>
+{/* 
         {addToCartProductQuantity.length > 0 ? (
           <span className="fixed top-4 right-7 text-white">
             {addToCartProductQuantity.length}
           </span>
         ) : (
           <span className="fixed top-4 right-10 text-white">0</span>
-        )}
+        )} */}
         <div className="flex gap-2">
+          <button className="border border-white p-1 align-middle rounded">
+            Login
+          </button>
+          <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold">
+            Signin
+          </button>
           <button className="hover:text-slate-400 text-[30px]">
             <BiSearch />
           </button>
@@ -91,6 +110,8 @@ const Navbar = () => {
         showWishList={WishlistShow}
         handleWishListFunction={handleWishlistSlide}
       />
+
+      {/* Menu for small devices */}
     </>
   );
 };

@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-2 justify-between">
           <div className="flex flex-col gap-2">
             <h1 className="text-slate-100 text-[25px]">Homedecor</h1>
-            <p className="text-slate-200 flex text-[17px] pt-[20px] max-w-[400px] xs:max-[500px]:hidden sm:block">
+            <p className="text-slate-200 flex text-[17px] pt-[20px] max-w-[400px] xs:max-[768px]:hidden lg:block">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -51,7 +51,7 @@ const Footer = () => {
           {/* info part */}
           <div className="flex flex-col p-1 gap-4">
             <h1 className="font-semibold text-white text-[25px]">Infomation</h1>
-            <div className="flex flex-col gap-6">
+            <div className="flex gap-4 md:flex-col sm:flex-row xs:flex-col">
               <div className="flex gap-4 items-center">
                 <span className="rounded-full p-2 bg-white">
                   <BiLocationPlus size={25} />
@@ -82,24 +82,26 @@ const Footer = () => {
             <h1 className="text-white font-semibold text-[25px]">
               Import Home Links
             </h1>
-            <Link
-              to="/"
-              className="text-white flex items-center gap-2 text-[20px] hover:text-slate-400"
-            >
-              <LiaLinkSolid size={25} /> Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-white flex items-center gap-2 text-[20px] hover:text-slate-400"
-            >
-              <LiaLinkSolid size={25} /> About
-            </Link>
-            <Link
-              to="/contact"
-              className="text-white flex items-center gap-2 text-[20px] hover:text-slate-400"
-            >
-              <LiaLinkSolid size={25} /> Contact us
-            </Link>
+            <div className="flex gap-2 md:flex-col sm:flex-row">
+              <Link
+                to="/"
+                className="text-white flex items-center gap-2 text-[20px] hover:text-slate-400"
+              >
+                <LiaLinkSolid size={25} /> Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-white flex items-center gap-2 text-[20px] hover:text-slate-400"
+              >
+                <LiaLinkSolid size={25} /> About
+              </Link>
+              <Link
+                to="/contact"
+                className="text-white flex items-center gap-2 text-[20px] hover:text-slate-400"
+              >
+                <LiaLinkSolid size={25} /> Contact us
+              </Link>
+            </div>
           </div>
 
           {/* News Letter */}

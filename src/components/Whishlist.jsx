@@ -19,7 +19,7 @@ const Whishlist = ({ showWishList, handleWishListFunction }) => {
             : "right-[-100px]"
         }`}
       >
-        {/* <div
+        <div
           className={`${
             showWishList
               ? "fixed z-50 right-44 uppercase font-bold text-slate-200 py-8"
@@ -27,7 +27,7 @@ const Whishlist = ({ showWishList, handleWishListFunction }) => {
           } `}
         >
           My WISHLIST
-        </div> */}
+        </div>
         <div className="flex justify-end relative">
           <button
             className="fixed top-8 right-6 bg-white rounded-full p-2 hover:bg-red-600 hover:text-white"
