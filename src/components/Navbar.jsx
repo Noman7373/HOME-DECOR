@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import Productcart from "./Productcart";
 import Whishlist from "./Whishlist";
 import { TbArrowsCross } from "react-icons/tb";
+import SearchProduct from "./SearchProduct";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -125,6 +126,8 @@ const Navbar = () => {
         showWishList={WishlistShow}
         handleWishListFunction={handleWishlistSlide}
       />
+
+      <SearchProduct />
 
       {/* Menu for small devices */}
 
