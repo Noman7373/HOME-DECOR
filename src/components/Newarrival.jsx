@@ -17,7 +17,7 @@ const Newarrival = () => {
           New Arrival
         </h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-4 xs:place-items-center">
         {getAllProducts.length > 0 ? (
           getAllProducts.map((items) => {
             return <Allnewarrivalitems key={items.id} items={items} />;

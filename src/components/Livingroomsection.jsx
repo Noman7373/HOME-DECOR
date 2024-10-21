@@ -66,13 +66,13 @@ const Livingroomsection = () => {
             </form>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 place-items-center sm:grid-cols-3 lg:grid-cols-4 gap-4 xs:place-items-center">
           {allBedroomsProducts.map(
             ({ id, name, img, description, price, actualPrice }) => {
               return (
                 <div
                   key={id}
-                  className="rounded-2xl relative flex flex-col justify-center items-center w-[270px] shadow-2xl my-[10px] max-[500px]:w-[190px]"
+                   className="rounded-2xl relative flex flex-col justify-center items-center w-[270px] shadow-2xl my-[10px]   xs:max-w-[170px] sm:max-w-[250px] md:max-w-[270px]"
                 >
                   <p className="absolute top-4 left-2 bg-slate-500 text-white p-1 italic rounded text-[15px] z-10">
                     New

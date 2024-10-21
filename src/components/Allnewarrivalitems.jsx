@@ -28,7 +28,7 @@ const Allnewarrivalitems = ({ items }) => {
   }
   return (
     <>
-      <div className="rounded-2xl relative flex flex-col justify-center items-center w-[270px] shadow-2xl my-[10px] max-[500px]:w-[190px]">
+      <div className="rounded-2xl relative flex flex-col justify-center items-center w-[270px] shadow-2xl my-[10px]   xs:max-w-[170px] sm:max-w-[250px] md:max-w-[270px]">
         <p className="absolute top-4 left-2 bg-slate-500 text-white p-1 italic rounded text-[15px] z-10">
           New
         </p>
