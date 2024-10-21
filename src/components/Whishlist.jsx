@@ -15,7 +15,7 @@ const Whishlist = ({ showWishList, handleWishListFunction }) => {
       <div
         className={`${
           showWishList
-            ? "fixed bg-slate-800 overflow-y-auto overflow-x-hidden h-full w-[450px] z-50 right-0 flex flex-col px-2"
+            ? "fixed bg-slate-800 overflow-y-auto overflow-x-hidden h-full w-[370px] z-50 right-0 flex flex-col px-2"
             : "right-[-100px]"
         }`}
       >
