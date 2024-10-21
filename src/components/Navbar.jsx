@@ -13,6 +13,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [cartShow, setCartShow] = useState(false);
   const [WishlistShow, setWishlistShow] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   // const addToCartProductQuantity = useSelector((state) => state.cart.data);
 
   //Handle Side Menu for small Screen
@@ -25,6 +26,10 @@ const Navbar = () => {
   }
   function handleWishlistSlide() {
     setWishlistShow((prev) => !prev);
+  }
+
+  function handleSearch() {
+    setShowSearch((prev) => !prev);
   }
   return (
     <>
@@ -87,7 +92,10 @@ const Navbar = () => {
           <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold xs:hidden md:block">
             Signin
           </button>
-          <button className="hover:text-slate-400 text-[30px] ">
+          <button
+            className="hover:text-slate-400 text-[30px]"
+            onClick={handleSearch}
+          >
             <BiSearch />
           </button>
           <button
@@ -127,7 +135,8 @@ const Navbar = () => {
         handleWishListFunction={handleWishlistSlide}
       />
 
-      <SearchProduct />
+      {/* search components */}
+      <SearchProduct showSearch={showSearch} handleSearch={handleSearch} />
 
       {/* Menu for small devices */}
 

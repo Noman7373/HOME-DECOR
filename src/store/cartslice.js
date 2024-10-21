@@ -1281,19 +1281,19 @@ let allItemsData = [
     price: 280,
     actualPrice: "$330",
   },
+  // {
+  //   category: "Office Chair",
+  //   id: 111,
+  //   name: "toscano",
+  //   img: img112,
+  //   description:
+  //     "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
+  //   price: 280,
+  //   actualPrice: "$330",
+  // },
   {
     category: "Office Chair",
     id: 111,
-    name: "toscano",
-    img: img112,
-    description:
-      "Lorem ipsum dolor sit amet. Est voluptates placeat qui error dolor in iusto earum aut dolorum veniam et incidunt harum. Ab consectetur omnis 33 eveniet possimus et rerum consequatur At aliquid dolores",
-    price: 280,
-    actualPrice: "$330",
-  },
-  {
-    category: "Office Chair",
-    id: 112,
     name: "toscano",
     img: img113,
     description:
@@ -1303,7 +1303,7 @@ let allItemsData = [
   },
   {
     category: "Office Chair",
-    id: 113,
+    id: 112,
     name: "toscano",
     img: img114,
     description:
