@@ -11,6 +11,8 @@ import DiningRoom from "./components/DiningRoom";
 import Officeitems from "./components/Officeitems";
 import DecorProduct from "./components/DecorProduct";
 import KitchenProducts from "./components/KitchenProducts";
+import SignuPage from "./components/SignuPage";
+import LoginPage from "./components/LoginPage";
 // import ScrollTop from "./components/ScrollTop";
 
 function App() {
@@ -63,6 +65,14 @@ function App() {
           path: "/contact",
           element: <Contact />,
         },
+        {
+          path: "/signup",
+          element: <SignuPage />,
+        },
+        {
+          path: "/login",
+          element: <LoginPage />,
+        },
       ],
     },
     {
@@ -74,7 +84,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-  
+
       <ToastContainer />
     </>
   );

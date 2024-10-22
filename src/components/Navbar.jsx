@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiMenu, BiSearch } from "react-icons/bi";
 import { FaHeart } from "react-icons/fa";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import { useSelector } from "react-redux";
 import Productcart from "./Productcart";
 import Whishlist from "./Whishlist";
@@ -86,12 +86,16 @@ const Navbar = () => {
         </ul>
 
         <div className="flex justify-center items-center gap-2">
-          <button className="border border-white p-1 align-middle rounded xs:hidden md:block">
-            Login
-          </button>
-          <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold xs:hidden md:block">
-            Signin
-          </button>
+          <Link to="/login">
+            <button className="border border-white p-1 align-middle rounded xs:hidden md:block">
+              Login
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold xs:hidden md:block">
+              Signup
+            </button>
+          </Link>
           <button
             className="hover:text-slate-400 text-[30px]"
             onClick={handleSearch}
