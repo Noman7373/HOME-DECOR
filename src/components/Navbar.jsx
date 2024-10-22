@@ -201,12 +201,16 @@ const Navbar = () => {
           >
             <li>Kitchen</li>
           </NavLink>
-          <button className="border border-white p-1 align-middle rounded">
-            Login
-          </button>
-          <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold ">
-            Signin
-          </button>
+          <Link to="/login" onClick={handleShowMenu}>
+            <button className="border border-white p-1 align-middle rounded">
+              Login
+            </button>
+          </Link>
+          <Link to="/signup" onClick={handleShowMenu}>
+            <button className="border border-white p-1 align-middle rounded bg-white text-black font-bold ">
+              Signin
+            </button>
+          </Link>
         </ul>
       </aside>
     </>
