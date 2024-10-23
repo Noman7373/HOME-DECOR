@@ -11,9 +11,12 @@ import DiningRoom from "./components/DiningRoom";
 import Officeitems from "./components/Officeitems";
 import DecorProduct from "./components/DecorProduct";
 import KitchenProducts from "./components/KitchenProducts";
-import SignuPage from "./components/SignuPage";
-import LoginPage from "./components/LoginPage";
-// import ScrollTop from "./components/ScrollTop";
+import SignuPage from "./components/AuthPages/SignuPage";
+import LoginPage from "./components/AuthPages/LoginPage";
+import Forgotpassword from "./components/AuthPages/Forgotpassword";
+import ForgotSuccess from "./components/AuthPages/ForgotSuccess";
+import PasswordReset from "./components/AuthPages/PasswordReset";
+import SuccessResetPassword from "./components/AuthPages/SuccessResetPassword";
 
 function App() {
   const router = createBrowserRouter([
@@ -73,6 +76,22 @@ function App() {
           path: "/login",
           element: <LoginPage />,
         },
+        {
+          path: "/forgot-password",
+          element: <Forgotpassword />,
+        },
+        {
+          path: "/forgot-success",
+          element: <ForgotSuccess />,
+        },
+        {
+          path: "/password-reset",
+          element: <PasswordReset />,
+        },
+        {
+          path: "/password-reset-success",
+          element: <SuccessResetPassword />,
+        },
       ],
     },
     {
@@ -84,7 +103,6 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-
       <ToastContainer />
     </>
   );
