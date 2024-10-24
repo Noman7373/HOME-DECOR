@@ -3,12 +3,19 @@ import { BiCartAdd } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addProductWishList, addToCart } from "../store/cartslice";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Bestsellers = () => {
   const dispatch = useDispatch();
 
   // Get Data from Cartslice store
   const allBestProducts = useSelector((state) => state.cart.allProducts);
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   // Mataching items category the data to the input
   const filterBestProducts = allBestProducts.filter(
@@ -46,6 +53,8 @@ const Bestsellers = () => {
             ({ id, name, img, description, price, actualPrice }) => {
               return (
                 <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
                   key={id}
                   className="rounded-2xl relative flex flex-col justify-center items-center w-[270px] shadow-2xl my-[10px]   xs:max-w-[170px] sm:max-w-[250px] md:max-w-[270px]"
                 >

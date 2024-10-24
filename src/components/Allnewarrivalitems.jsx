@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addProductWishList, addToCart } from "../store/cartslice";
 import { HiHeart } from "react-icons/hi2";
 import { BiCartAdd } from "react-icons/bi";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Allnewarrivalitems = ({ items }) => {
   const dispatch = useDispatch();
   const { id, name, img, description, price, actualPrice } = items;
+  
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   function handleAddToCart(id, name, img, description, price, actualPrice) {
     let product = {
@@ -28,7 +34,11 @@ const Allnewarrivalitems = ({ items }) => {
   }
   return (
     <>
-      <div className="rounded-2xl relative flex flex-col justify-center items-center w-[270px] shadow-2xl my-[10px]   xs:max-w-[170px] sm:max-w-[250px] md:max-w-[270px]">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="rounded-2xl relative flex flex-col justify-center items-center w-[270px] shadow-2xl my-[10px]   xs:max-w-[170px] sm:max-w-[250px] md:max-w-[270px]"
+      >
         <p className="absolute top-4 left-2 bg-slate-500 text-white p-1 italic rounded text-[15px] z-10">
           New
         </p>

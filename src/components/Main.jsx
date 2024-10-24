@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import mainImage from "../assets/furniture1.avif";
 import paymentLogo from "../assets/cardr.png";
 import { CiDeliveryTruck } from "react-icons/ci";
@@ -8,13 +8,17 @@ import Newarrival from "./Newarrival";
 import Bestsellers from "./Bestsellers";
 import { Link } from "react-router-dom";
 
+
 const Main = () => {
+ 
   return (
     <>
       <div className="px-[20px] overflow-x-hidden pt-[150px] pb-[30px]">
         <div className="flex flex-col gap-[10px] mt-4 justify-between md:flex-row items-center">
           <div className="flex flex-col gap-4 max-w-[600px] p-4">
-            <h1 className="text-[30px] md:text-[50px] font-bold">
+            <h1
+              className="text-[30px] md:text-[50px] font-bold"
+            >
               Home of quality furniture
             </h1>
             <p className="text-slate-700 text-[20px] md:text-[27px]">
@@ -39,7 +43,10 @@ const Main = () => {
           </div>
         </div>
         <div className="hidden flex-wrap md:hidden lg:flex justify-center items-center w-full gap-6 mt-12 p-2 px-[20px]">
-          <div className="flex flex-col justify-center items-center gap-2 max-w-[300px] border shadow-2xl rounded-lg text-center p-5">
+          <div
+           
+            className="flex flex-col justify-center items-center gap-2 max-w-[300px] border shadow-2xl rounded-lg text-center p-5"
+          >
             <span className="rounded-full flex items-center justify-center p-2 bg-black">
               <CiDeliveryTruck size={30} color="white" />
             </span>

@@ -10,6 +10,10 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.env
+expressAuthJwt1-master
+src/Api
+.gitignore
 *.local
 
 # Editor directories and files
