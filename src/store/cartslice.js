@@ -1,4 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useCookies } from "react-cookie";
+import jwtDecode from "jwt-decode";
+
 import img1 from "../assets/circleT.avif";
 import img2 from "../assets/cushion1.avif";
 import img3 from "../assets/cushion2.avif";
@@ -1805,12 +1808,16 @@ let allItemsData = [
 
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 let wishListProduct = JSON.parse(localStorage.getItem("Wishlist")) || [];
+
 const cartSlice = createSlice({
+  authName: "user",
   name: "cart",
   initialState: {
     data: cartItems,
     allProducts: allItemsData,
     userFavProducts: wishListProduct,
+    user: null,
+    token: null,
   },
   reducers: {
     addToCart(state, action) {
@@ -1861,6 +1868,12 @@ const cartSlice = createSlice({
         (items) => items.id !== productId
       );
       localStorage.setItem("Wishlist", JSON.stringify(state.userFavProducts));
+    },
+    logIn: (state, action) => {
+      const { tokenStr } = action.payload;
+      if(tokenStr) {
+
+      }
     },
   },
 });

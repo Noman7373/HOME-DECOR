@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { BsEyeSlash } from "react-icons/bs";
 import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
+import { signUpUser } from "../../Api/Query/userQuery";
 
 const SignuPage = () => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const SignuPage = () => {
 
   useEffect(() => {
     InputRef.current.focus();
-  });
+  }, []);
 
   const validate = () => {
     const newErrors = {};
@@ -34,16 +35,31 @@ const SignuPage = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validateErrors = validate();
     if (Object.keys(validateErrors).length > 0) {
       setErrors(validateErrors);
     } else {
-      console.log("Form submitting", formValues);
-      navigate("/");
+      try {
+        const user = await signUpUser({
+          Name: formValues.Name,
+          Email: formValues.Email,
+          Password: formValues.Password,
+        });
+        if (user) {
+          navigate("/"); // Redirect to home or any page on success
+        }
+      } catch (error) {
+        // Log the error message for debugging
+        console.error("Sign-up failed:", error.message);
+  
+        // Optionally set a form-level error to display to the user
+        setErrors({ submit: error.message });
+      }
     }
   };
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -131,6 +147,11 @@ const SignuPage = () => {
                 Sign Up
               </button>
             </form>
+
+            {errors.submit && (
+  <div className="text-red-500 text-sm">{errors.submit}</div>
+)}
+
             <p className="text-center text-white mt-6">
               Already have an account?{" "}
               <Link to="/login" className="uppercase font-bold">

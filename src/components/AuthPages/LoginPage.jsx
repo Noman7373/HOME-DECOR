@@ -33,7 +33,10 @@ const LoginPage = () => {
       setError(validateError);
     } else {
       try {
-        const user = await signinUser({ email, password });
+        const user = await signinUser({
+          email: email,
+          password: password,
+        });
         if (user) {
           navigate("/");
         }
